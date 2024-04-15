@@ -1,26 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Form with Gmail</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link rel="stylesheet" href="style.css"/>
+    <title>Contact Form</title>
 </head>
 <body>
-    <div class="container">
-        <form>
-            <h3>Get In Touch</h3>
-            <input type="text" id="name" placeholder="Your name" required>
-            <input type="email" id="email" placeholder="Your mail address" required>
-            <input type="number" id="phone" placeholder="Your phone number" required>
-            <textarea id="msg" rows="4" placeholder="How can we help you?"></textarea>
-            <button type="submit">Send</button>
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <div class="contact-left-title">
+                <h2>Get In Touch</h2>
+                <hr>
+            </div>
+            <input type="hidden" name="access_key" value="11e4d2b0-38d3-4eeb-a3f9-d5ae5b532294">
+            <input type="text" name="name" placeholder="Your name" class="contact-input" required>
+            <input type="email" name="email" placeholder="Your email" class="contact-input" required>
+            <textarea name="msg" placeholder="Your message" class="contact-input" required></textarea>
+            <button type="submit">Submit</button>
         </form>
+        <div class="contact-right">
+            <img src="img/right_img.png" alt="">
+        </div>
     </div>
-
-
-
-
-
 </body>
 </html>
